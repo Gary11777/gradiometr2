@@ -53,8 +53,10 @@
                             <div class="ml-4">
                                 <p class="text-sm text-gray-500">Телефон</p>
                                 <p class="text-lg text-gray-900 font-medium cursor-pointer" 
-                                   x-data @click="$el.innerText = '+37529 636-35-97'">
-                                   <span class="border-b border-dashed border-gray-400 hover:border-brand-500 transition">Показать номер</span>
+                                   x-data="obfuscatedPhone(['+375', '29', ' ', '636', '-', '35', '-', '97'])"
+                                   @click="call()"
+                                   title="Позвонить">
+                                   <span class="border-b border-dashed border-gray-400 hover:border-brand-500 transition" x-text="displayPhone"></span>
                                 </p>
                             </div>
                         </li>

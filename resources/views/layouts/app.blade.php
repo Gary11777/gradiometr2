@@ -142,7 +142,12 @@
                     <ul class="space-y-2 text-sm text-gray-500">
                         <li class="flex items-center space-x-2">
                             <span class="w-4 h-4 text-brand-500">📞</span>
-                            <span x-data @click="$el.innerText = '+37529 636-35-97'" class="cursor-pointer hover:text-gray-900 transition">Показать номер</span>
+                            <span x-data="obfuscatedPhone(['+375', '29', ' ', '636', '-', '35', '-', '97'])" 
+                                  @click="call()" 
+                                  class="cursor-pointer hover:text-gray-900 transition"
+                                  title="Позвонить">
+                                <span x-text="displayPhone"></span>
+                            </span>
                         </li>
                         <li class="flex items-center space-x-2">
                             <span class="w-4 h-4 text-brand-500">✉️</span>
