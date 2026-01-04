@@ -67,7 +67,12 @@
                             </div>
                             <div class="ml-4">
                                 <p class="text-sm text-gray-500">Email</p>
-                                <a href="mailto:info@gradiometr.com" class="text-lg text-gray-900 font-medium hover:text-brand-600 transition">info@gradiometr.com</a>
+                                <a href="#" 
+                                   x-data="obfuscatedEmail('info', 'gradiometr.com')" 
+                                   @click.prevent="mail()" 
+                                   x-text="displayEmail" 
+                                   class="text-lg text-gray-900 font-medium hover:text-brand-600 transition">
+                                </a>
                             </div>
                         </li>
                     </ul>

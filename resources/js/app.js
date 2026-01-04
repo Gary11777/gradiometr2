@@ -18,6 +18,15 @@ document.addEventListener('alpine:init', () => {
             window.location.href = 'tel:' + this.telLink;
         }
     }));
+
+    Alpine.data('obfuscatedEmail', (user, domain) => ({
+        user: user,
+        domain: domain,
+        displayEmail: user + '@' + domain,
+        mail() {
+            window.location.href = 'mailto:' + this.displayEmail;
+        }
+    }));
 });
 
 Alpine.start();

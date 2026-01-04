@@ -151,7 +151,12 @@
                         </li>
                         <li class="flex items-center space-x-2">
                             <span class="w-4 h-4 text-brand-500">✉️</span>
-                            <a href="mailto:info@gradiometr.com" class="hover:text-gray-900 transition">info@gradiometr.com</a>
+                            <a href="#" 
+                               x-data="obfuscatedEmail('info', 'gradiometr.com')" 
+                               @click.prevent="mail()" 
+                               x-text="displayEmail" 
+                               class="hover:text-gray-900 transition">
+                            </a>
                         </li>
                     </ul>
                 </div>
