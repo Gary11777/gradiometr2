@@ -140,7 +140,7 @@
                 <div>
                     <h3 class="text-gray-900 font-semibold mb-4 uppercase text-xs tracking-wider">Контакты</h3>
                     <ul class="space-y-2 text-sm text-gray-500">
-                        <li class="flex items-center space-x-2">
+                        {{-- <li class="flex items-center space-x-2">
                             <span class="w-4 h-4 text-brand-500">📞</span>
                             <span x-data="obfuscatedPhone(['+375', '29', ' ', '636', '-', '35', '-', '97'])" 
                                   @click="call()" 
@@ -148,7 +148,7 @@
                                   title="Позвонить">
                                 <span x-text="displayPhone"></span>
                             </span>
-                        </li>
+                        </li> --}}
                         <li class="flex items-center space-x-2">
                             <span class="w-4 h-4 text-brand-500">✉️</span>
                             <a href="#" 
@@ -162,7 +162,13 @@
                 </div>
             </div>
             <div class="mt-8 pt-8 border-t border-gray-200 text-center text-xs text-gray-500">
-                &copy; {{ date('Y') }} Gradiometr.com. Все права защищены.
+                <p>&copy; {{ date('Y') }} Gradiometr.com. Все права защищены.</p>
+                <p class="mt-2">
+                    Разработка сайта 
+                    <a href="https://sitestar.by/" target="_blank" rel="noopener noreferrer" class="text-gray-900 font-bold hover:text-brand-600 transition">
+                        SiteStar.by
+                    </a>
+                </p>
             </div>
         </div>
     </footer>
