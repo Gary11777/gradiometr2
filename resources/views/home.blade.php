@@ -4,7 +4,7 @@
 
 @section('content')
 <!-- Hero Section -->
-<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+<section class="relative min-h-[40vh] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
         <img src="{{ asset('images/home/photo_garand101_21.jpg') }}" alt="Garand 101" class="w-full h-full object-cover opacity-20">
         <!-- Changed gradient to white -->
@@ -19,7 +19,7 @@
         </h1>
         <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto font-light leading-relaxed transform transition-all duration-1000 delay-300"
            :class="show ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'">
-            Феррозондовый магнитометр-градиентометр для профессионального поиска.
+            Феррозондовый магнитометр-градиентометр <br>для профессионального поиска.
         </p>
         <div class="transform transition-all duration-1000 delay-500"
              :class="show ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'">
