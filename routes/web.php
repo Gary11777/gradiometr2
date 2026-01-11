@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class, 'home'])->name('home');
@@ -11,6 +12,8 @@ Route::get('/comparing', [PageController::class, 'comparing'])->name('comparing'
 Route::get('/photos', [PageController::class, 'photos'])->name('photos');
 Route::get('/buy', [PageController::class, 'buy'])->name('buy');
 Route::get('/about', [PageController::class, 'about'])->name('about');
+
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
 Route::post('/contact', [ContactController::class, 'submit'])
     ->name('contact.submit')
